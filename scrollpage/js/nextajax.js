@@ -282,7 +282,7 @@
           }
           // 提示总数
           $($pcfg['p_total_dom']).html($pcfg['p_total_desc'].replace('(X)',total));
-          if(total == 0 ){
+          if(total == 0 || msg.page['totalPages'] < msg.page['nowPage']){
             $elements.nextAll($pcfg['p_empty_dom']).show();
           }
         }
